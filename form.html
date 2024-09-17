@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+</head>
+
+<body>
+
+    <h1>
+        Ett formulär för att skicka data
+    </h1>
+    <!-- form: omslutande element för ett formulär -->
+    <!-- form method ska oftast vara 'post', men i VS Code live server ger dett ett http error:405 -->
+    <!-- använd här method get -->
+    <form action="" method="get">
+        <!-- input: fält med olika möljgheter via attributet type -->
+        <p>
+            <!-- label: ange ett förklaring till ett fält -->
+            <!-- se till att matcha värdet för attributet for(label) med id fält  -->
+            <label for="name">Ange ditt namn:</label>
+            <br>
+            <!-- använd attributet 'name' för att innehåll ska skickas -->
+            <input type="text" id="name" name="name">
+        </p>
+
+        <p>
+            <label for="first-name">Förnamn:</label>
+            <br>
+            <input type="text" name="first-name" id="first-name" required>
+        </p>
+
+        <p>
+            <label for="last-name">Efternamn:</label>
+            <br>
+            <input type="text" name="last-name" id="last-name">
+        </p>
+
+        <p>
+            <label for="ange">Ålder:</label>
+            <br>
+            <input type="number" name="ange" id="ange" max="99">
+        </p>
+        <p>
+            <label for="e-mail">E-mail:</label>
+            <br>
+            <input type="email" name="e-mail" id="e-mail">
+        </p>
+
+        <p>
+            <fieldset>
+                <legend>Vad är du intreserrad av:</legend>
+                <br><br><br>
+                <input type="checkbox" name="html" id="html"><label for="html">HTML</label>
+            </fieldset>
+        </p>
+
+        <p>
+            <label for="country">Ange land:</label>
+            <select name="country" id="country">
+                <option value="sweden">Sverige</option>
+                <option value="norwey">Norge</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Skicka">
+    </form>
+</body>
+
+</html>
